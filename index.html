@@ -178,6 +178,7 @@
   .legend .vhigh::before { background: var(--c-vhigh); }
 
   table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  .table-scroll, #transition-matrix { overflow-x: auto; }
   th, td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--vc-border, #dddddd); vertical-align: middle; }
   th:first-child, td:first-child { text-align: left; }
   thead th { font-weight: 700; background: var(--vc-bg-alt, #f4f4f4); text-transform: uppercase; letter-spacing: 0.04em; font-size: 12px; }
@@ -198,6 +199,7 @@
   details[open] summary { margin-bottom: 12px; }
   details ul, details ol { padding-left: 22px; }
   details li { margin-bottom: 6px; }
+  details li a { overflow-wrap: anywhere; }
   code {
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     font-size: 13px;
@@ -277,7 +279,7 @@
   </div>
 
   <h3>Detailed table</h3>
-  <table id="boro-table"></table>
+  <div class="table-scroll"><table id="boro-table"></table></div>
 </section>
 
 <section>
